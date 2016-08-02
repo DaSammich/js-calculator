@@ -1,0 +1,79 @@
+body {
+  font-family: 'helvetica';
+  font-size: 15px;
+  background-color: #D2FFE8;
+}
+
+.title {
+  font-family: "Pacifico";
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: yellow;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  /* no highlighting */
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+}
+
+.background {
+  background-color: orange;
+  width: 260px;
+  height: 380px;
+  margin: auto;
+  padding-top: 10px;
+  border-radius: 5%;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.text-display {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: right;
+  background-color: white;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.text-display-num {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.button-group {
+  margin-left: 5px;
+}
+
+.button {
+  width: 50px;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
+  background: pink;
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 20%;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  /* no highlighting */
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+}
+
+.button:hover {
+  background-color: #3AA4F5;
+  cursor: pointer;
+}

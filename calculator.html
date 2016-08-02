@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="calc_style.css">
+  <script src="calc.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      var margin_top = ($(window).height() - 365) / 2;
+      $("#bg").css("margin-top", margin_top + "px");
+    
+      window.addEventListener("resize", center);
+    
+      var display = $("#display");
+      var width = display.width();
+    
+      console.log(width);
+    
+      $("#AC").click(function() {
+        reset();
+      });
+      $("#CE").click(function() {
+        display.html(display.html().slice(0, display.html().length-1));
+      });
+      $("#mod").click(function() {
+        // under construction
+      });
+      $("#div").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("/");
+        }
+      });
+      $("#7").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("7");
+        }
+      });
+      $("#8").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("8");
+        }
+      });
+      $("#9").click(function() {
+        if (checkWidth(display.width())) {
+         display.append("9");
+        }
+      });
+      $("#mult").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("*");
+        }
+      });
+      $("#4").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("4");
+        }
+      });
+      $("#5").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("5");
+        }
+      });
+      $("#6").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("6");
+        }
+      });
+      $("#sub").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("-");
+        }
+      });
+      $("#1").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("1");
+        }
+      });
+      $("#2").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("2");
+        }
+      });
+      $("#3").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("3");
+        }
+      });
+      $("#add").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("+");
+        }
+      });
+      $("#dot").click(function() {
+        if (checkWidth(display.width())) {
+          display.append(".");
+        }
+      });
+      $("#0").click(function() {
+        if (checkWidth(display.width())) {
+          display.append("0");
+        }
+      });
+      $("#Ans").click(function() {
+        // under construction
+      });
+      $("#eq").click(function() {
+        var ans = calc(display.text());
+        display.html(ans);
+      });
+    });
+    
+    function checkWidth(width) {
+      return width < 200;
+    }
+    
+    function reset() {
+      $("#display").empty();
+      $("#display").html("&nbsp");
+    }
+    
+    function center() {
+      // centers vertically when window resizes
+      var margin_top = ($(window).height() - 390) / 2;
+      $("#bg").css("margin-top", margin_top + "px");
+    }
+  </script>
+
+
+</head>
+
+<body>
+  <div id="bg" class="background">
+    <div class="title">
+      Free Code Camp Calculator
+    </div>
+    <div class="text-display">&nbsp<span id="display"></span></div>
+    <div class="button-group">
+      <div id="AC" class="button">AC</div>
+      <div id="CE" class="button">CE</div>
+      <div id="mod" class="button">%</div>
+      <div id="div" class="button">/</div>
+      <div id="7" class="button">7</div>
+      <div id="8" class="button">8</div>
+      <div id="9" class="button">9</div>
+      <div id="mult" class="button">*</div>
+      <div id="4" class="button">4</div>
+      <div id="5" class="button">5</div>
+      <div id="6" class="button">6</div>
+      <div id="sub" class="button">-</div>
+      <div id="1" class="button">1</div>
+      <div id="2" class="button">2</div>
+      <div id="3" class="button">3</div>
+      <div id="add" class="button">+</div>
+      <div id="dot" class="button">.</div>
+      <div id="0" class="button">0</div>
+      <div id="Ans" class="button">Ans</div>
+      <div id="eq" class="button">=</div>
+    </div>
+  </div>
+	</body>
+</html>
